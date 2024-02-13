@@ -136,7 +136,7 @@
   .header-slide {
     width: 100%;
     height: 450px;
-    background: url('./image/slide-1.jpg') no-repeat center center/cover;
+    background: url('slide-1.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -198,7 +198,7 @@
   .xbox {
     width: 100%;
     height: 450px;
-    background: url('./image/xbox.jpg') no-repeat center center/cover;
+    background: url('xbox.jpg') no-repeat center center/cover;
     margin-bottom: 50px;
   }
   
@@ -256,7 +256,7 @@
   .support {
     width: 100%;
     height: 450px;
-    background: url('./image/support.jpg') no-repeat center center/cover;
+    background: url('support.jpg') no-repeat center center/cover;
     margin-bottom: 30px;
   }
   
