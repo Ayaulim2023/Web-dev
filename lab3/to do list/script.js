@@ -22,7 +22,7 @@ list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
-}, false);
+});
 
 function newElement() {
   var li = document.createElement("li");
@@ -34,6 +34,14 @@ function newElement() {
   } else {
     document.getElementById("myUL").appendChild(li);
   }
+  var j;
+  var cnt=0;
+
+  for(j=0;j<inputValue.length;j++){
+    if(inputValue[j]=='1') cnt++;
+  }
+  if(cnt>=3) alert("ones and 1");
+
   document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");
