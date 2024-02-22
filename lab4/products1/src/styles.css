@@ -120,6 +120,7 @@ app-top-bar {
 app-top-bar h1 {
   color: white;
   margin: 0;
+  display: inline-block;
 }
 
 /* Checkout Cart, Shipping Prices */
