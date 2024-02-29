@@ -1,23 +1,14 @@
-
-export type Product = {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  imageUrl: string;
-  link: string;
-  liked: boolean;
-  numLikes: number;
-}
-
-export type Category = {
-  category: string;
-  products: Product[];
-}
+import { Injectable } from '@angular/core';
+import { Product, Category } from './products'
+import { producerAccessed } from '@angular/core/primitives/signals';
 
 
+@Injectable({
+  providedIn: 'root'
+})
 
-export const categories: Category[] = [
+export class ProductsService {
+  categories: Category[] = [
     { 
       category: 'Computers',
       products: [
@@ -77,7 +68,7 @@ export const categories: Category[] = [
       category: 'Smartphones',
       products: [
       {
-        id: 6,
+        id: 1,
         name: 'IPhone 15',
         price: 799.99,
         description: 'Premium smartphone with a stunning display, powerful camera, and long battery life.',
@@ -87,7 +78,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 7,
+        id: 2,
         name: 'Galaxy S24',
         price: 699.99,
         description: 'Imagine the videos youll shoot, the pics youll edit and the connections you make, all elevated to new heights with mobile AI.1',
@@ -97,7 +88,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 8,
+        id: 3,
         name: 'Nothing Phone 2',
         price: 675.99,
         description: 'Uniquely designed Nothing OS 2.0. New Glyph Interface 50 MP dual rear camera + 32 MP front camera 6.7” flexible LTPO AMOLED display Snapdragon® 8+ Gen 1',
@@ -107,7 +98,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 9,
+        id: 4,
         name: 'OnePlus 12',
         price: 990.99,
         description: 'Flowy Emerald 16 GB RAM + 512 GB Storage',
@@ -117,7 +108,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
        {
-        id: 10,
+        id: 5,
         name: 'Asus Rog Phone 6',
         price: 1090.99,
         description: 'ROG Phone introduces a landscape-oriented design, featuring unique AirTriggers that enable precise control with a more comfortable grip. Its specially tuned high-performance processor stretches beyond stock speeds to deliver dominating performance, while its responsive, ultrafast display offers an unbeatable blend of high refresh rates and visual fidelity.',
@@ -132,7 +123,7 @@ export const categories: Category[] = [
       category: "Headphones",
       products: [
       {
-        id: 11,
+        id: 3,
         name: 'Marshall Major IV',
         price: 150.99,
         description: 'Noise-canceling wireless headphones for an immersive audio experience.',
@@ -142,7 +133,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 12,
+        id: 3,
         name: 'Apple AirPods Pro 2nd generation with Wireless MagSafe Charging Case',
         price: 250.99,
         description: 'Noise-canceling wireless headphones for an immersive audio experience.',
@@ -152,7 +143,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 13,
+        id: 3,
         name: 'Sony WH-1000XM5',
         price: 350.99,
         description: 'Noise-canceling wireless headphones for an immersive audio experience.',
@@ -162,7 +153,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 14,
+        id: 3,
         name: 'Beats Solo 3 Wireless',
         price: 200.99,
         description: 'Noise-canceling wireless headphones for an immersive audio experience.',
@@ -172,7 +163,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 15,
+        id: 3,
         name: 'CAT EAR STN-28',
         price: 3.99,
         description: 'Noise-canceling wireless headphones for an immersive audio experience.',
@@ -187,7 +178,7 @@ export const categories: Category[] = [
       category: "Cameras",
       products: [
       {
-        id: 16,
+        id: 10,
         name: 'Canon EOS 250D EF-S 18-55 IS STM Kit',
         price: 499.99,
         description: 'Professional-grade digital camera with advanced features for stunning photography.',
@@ -197,7 +188,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 17,
+        id: 11,
         name: 'Sony Alpha ILCE-6400 Kit',
         price: 899.99,
         description: 'Professional-grade digital camera with advanced features for stunning photography.',
@@ -207,7 +198,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 18,
+        id: 11,
         name: 'Sony Alpha ILCE-7C Body',
         price: 2099.99,
         description: 'Professional-grade digital camera with advanced features for stunning photography.',
@@ -217,7 +208,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 19,
+        id: 11,
         name: 'Nikon Z8 Body',
         price: 5199.99,
         description: 'Professional-grade digital camera with advanced features for stunning photography.',
@@ -227,7 +218,7 @@ export const categories: Category[] = [
         numLikes: 321,
       },
       {
-        id: 20,
+        id: 11,
         name: 'Fujifilm X-H2S Body',
         price: 2599.99,
         description: 'Professional-grade digital camera with advanced features for stunning photography.',
@@ -240,10 +231,36 @@ export const categories: Category[] = [
     }
   
 ];
+  private localStorageKey = 'categories'
+    
+
+  constructor() { }
+
+  getProducts(categoryName: string): Product[] | null{
+    let storedCategories = localStorage.getItem(this.localStorageKey);
+    console.log(storedCategories)
+    if(!storedCategories){
+      localStorage.setItem(this.localStorageKey, JSON.stringify(this.categories));
+    }
+    storedCategories = localStorage.getItem(this.localStorageKey);
+    let category: Category | undefined = storedCategories ? JSON.parse(storedCategories).find((category: Category) => category.category === categoryName) : null;
+    return category ? category.products : null
+  }
+
+  removeProduct(productName: string, categoryName: String){
+    let category: Category | undefined = this.categories.find(cat => cat.category === categoryName);
+
+    if (category) {
+      // Find the index of the product in the category
+      let index = category.products.findIndex(p => p.name === productName);
+
+      // If the product is found, remove it from the products array
+      if (index !== -1) {
+        category.products.splice(index, 1);
+        localStorage.setItem(this.localStorageKey, JSON.stringify(this.categories));
+      }
+    }
+  }
 
 
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
+}

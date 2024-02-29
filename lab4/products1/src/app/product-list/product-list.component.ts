@@ -1,31 +1,58 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
+import { NgOptimizedImage} from '@angular/common';
+import { Product } from '../products';
+import { ProductsService } from '../products.service';
 
-import { products } from '../products';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit{
+  category: string = ""
+  products: Product[] | [] = []
 
-  products = [...products];
-
-  share(name:string,link:string) {
-    const baseUrl = "https://web.telegram.org/a/";
-    const message = `Check out this product: ${name}. ${link}`;
-    const encodedMessage = encodeURIComponent(message);
-    const telegramLink = baseUrl + encodedMessage;
-    
-    window.location.href = baseUrl;
+  constructor(private pS: ProductsService, private route: ActivatedRoute){
   }
 
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
+
+  getProducts(): Product[] | null{
+    return this.pS.getProducts(this.category) ?? null
   }
 
+  ngOnInit(): void {
+    this.route.queryParams
+    .subscribe(params => {
+        if(params['category']){
+        this.category = params['category']
+        console.log(this.category)
+        this.products = this.getProducts() ?? []
+      }else{
+        this.products = []
+      }
+    })
+  }
+
+  onRefresh(): void{
+    this.route.queryParams
+    .subscribe(params => {
+        if(params['category']){
+        this.category = params['category']
+        console.log(this.category)
+        this.products = this.getProducts() ?? []
+      }else{
+        this.products = []
+      }
+    })
+  }
+  
+  removeProduct(productName: string): void{
+    this.pS.removeProduct(productName, this.category);
+    this.onRefresh();
+  }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

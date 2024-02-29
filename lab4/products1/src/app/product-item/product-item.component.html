@@ -1,0 +1,35 @@
+<div class="product_item"> 
+    <div class="remove_container">
+        <button class="remove_button" (click)="removeProduct()">X</button>
+    </div>
+    <img class="product_image" [src]="product.imageUrl"/>
+    <h3>
+        <a [title]="product.name + ' ' + 'details'" href="{{product.link}}">
+            {{ product.name }}
+        </a>
+    </h3>
+
+    <h4>
+        {{product.price}}
+    </h4>
+
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+    </p>
+    
+    <div class="like_container">
+        <p>{{product.numLikes}}</p>
+        <button class="like_button" (click)="toggleLike()">
+            <img *ngIf="product.liked" src="../../assets/like_true.png">
+            <img *ngIf="!product.liked" src="../../assets/like_false.png">
+        </button>
+    </div>
+
+    <div class="buttons_container">
+        <button class="share_button" type="button" (click)="share(product.name, product.link)">
+            Share
+        </button>
+        <app-product-alerts [product]="product" (notify)="onNotify()">
+        </app-product-alerts>
+    </div>
+</div>

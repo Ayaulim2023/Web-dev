@@ -1,12 +1,36 @@
-.product{
-    display: inline-block;
-    margin-left: 30px;
-}
-/* .container {
-    display: inline-block;
- } */
+
+
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 */
+.product_list{
+    position: absolute;
+    top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px
+}
+.product_item{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 0.3;
+    width: 300px;
+    border: 1px black solid;
+}
+
+.product_image{
+    width: 250px;
+    height: 250px;
+}
+
+h2{
+    margin-bottom: 50px;
+}

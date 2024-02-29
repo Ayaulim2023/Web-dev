@@ -1,6 +1,36 @@
 
+
+
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 */
+.contianer{
+    width: 100%;
+    position: relative
+}
+.categories_container{
+    position: absolute;
+    display: flex;
+    width: 90%;
+    height: 100px;
+    flex-direction: row;
+    gap: 50px;
+    margin: 0px 100px;
+    flex-grow: 0.2;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.category_link{
+    flex-basis: 1;
+    flex-grow: 1;
+    border: 1px black solid;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 5px;
+}
