@@ -29,7 +29,7 @@ export const categories: Category[] = [
         imageUrl: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1664472289661',
         link: 'https://kaspi.kz/shop/p/apple-macbook-air-13-mgn93-serebristyi-100798912/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 2,
@@ -39,7 +39,7 @@ export const categories: Category[] = [
         imageUrl: "https://resources.cdn-kaspi.kz/img/m/p/h4a/hc6/64348756541470.jpg?format=gallery-medium",
         link: "https://kaspi.kz/shop/p/lenovo-legion-5-15ach6h-82ju000vrk-chernyi-103904710/?c=514420100",
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 3,
@@ -49,7 +49,7 @@ export const categories: Category[] = [
         imageUrl: "https://resources.cdn-kaspi.kz/img/m/p/hc8/h11/64377753796638.jpg?format=gallery-medium",
         link: "https://kaspi.kz/shop/p/acer-nitro-5-an515-57-nh-qeler-008-chernyi-102710820/?c=750000000",
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 4,
@@ -59,7 +59,7 @@ export const categories: Category[] = [
         imageUrl: "https://resources.cdn-kaspi.kz/img/m/p/he7/h5e/80569304547358.jpg?format=gallery-medium",
         link: "https://kaspi.kz/shop/p/asus-rog-strix-scar-18-g834jy-n6038w-90nr0cg1-m004n0-chernyi-110148074/",
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 5,
@@ -69,7 +69,7 @@ export const categories: Category[] = [
         imageUrl: "https://resources.cdn-kaspi.kz/img/m/p/h88/h18/64372891975710.jpg?format=gallery-medium",
         link: "https://kaspi.kz/shop/p/apple-macbook-pro-16-2023-mnwe3-serebristyi-108645905/?c=750000000",
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       }
     ]
     },
@@ -84,7 +84,7 @@ export const categories: Category[] = [
         imageUrl: 'https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large_2x.jpg',
         link: 'https://kaspi.kz/shop/p/apple-iphone-15-128-gb-dual-sim-chernyi-113933011/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 7,
@@ -94,7 +94,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h7c/h38/84963297329182.png?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/samsung-galaxy-s24-5g-8-gb-256-gb-zheltyi-podarok-116004092/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 8,
@@ -104,7 +104,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/hc9/h4b/82547092291614.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/nothing-phone-2-12-gb-256-gb-belyi-112354665/',
         liked: false,
-        numLikes: 321,
+        numLikes:0,
       },
       {
         id: 9,
@@ -114,7 +114,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h48/hf1/85092040769566.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/oneplus-12-12-gb-256-gb-chernyi-116425514/',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
        {
         id: 10,
@@ -124,7 +124,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h39/h55/64849776377886.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/asus-rog-phone-6-16-gb-512-gb-chernyi-106955302/',
         liked: false,
-        numLikes: 321,
+        numLikes:0,
       },
     ]
     },
@@ -139,7 +139,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h20/h21/64344048762910.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/marshall-major-iv-chernyi-102138144/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 12,
@@ -149,7 +149,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/apple-airpods-pro-2nd-generation-with-wireless-magsafe-charging-case-belyi-113677582/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 13,
@@ -159,7 +159,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h9c/h23/65099684020254.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/sony-wh-1000xm5-chernyi-105259822/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 14,
@@ -169,7 +169,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h32/h49/63774399856670.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/beats-solo-3-wireless-chernyi-4801909/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 15,
@@ -179,7 +179,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h46/hd1/64251276197918.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/cat-ear-stn-28-rozovyi-101768468/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes:0,
       },
     ]
     },
@@ -194,7 +194,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h9f/hf6/63832508596254.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/canon-eos-250d-ef-s-18-55-is-stm-kit-2240118/?c=750000000',
         liked: true,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 17,
@@ -204,7 +204,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h03/h73/64159784894494.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/sony-alpha-ilce-6400-kit-chernyi-102238049/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 18,
@@ -214,7 +214,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h15/hbb/64020050935838.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/sony-alpha-ilce-7c-body-serebristyi-101137965/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 19,
@@ -224,7 +224,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h55/h01/84618254975006.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/nikon-z8-body-114315579/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
       {
         id: 20,
@@ -234,7 +234,7 @@ export const categories: Category[] = [
         imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h77/hbe/65918289772574.jpg?format=gallery-medium',
         link: 'https://kaspi.kz/shop/p/fujifilm-x-h2s-body-107636460/?c=750000000',
         liked: false,
-        numLikes: 321,
+        numLikes: 0,
       },
     ]
     }
