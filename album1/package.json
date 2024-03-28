@@ -1,5 +1,5 @@
 {
-  "name": "myapp",
+  "name": "album1",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:myapp": "node dist/myapp/server/server.mjs"
+    "serve:ssr:album1": "node dist/album1/server/server.mjs"
   },
   "private": true,
   "dependencies": {

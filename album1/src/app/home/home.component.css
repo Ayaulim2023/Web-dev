@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.home-works-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.more-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 1px solid #36b9dd;
+  border-radius:7px;
+  background-color: #009dff;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.more-button:hover {
+  background-color: #6ea1d8;
+}

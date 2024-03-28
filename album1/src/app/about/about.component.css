@@ -1,0 +1,33 @@
+.about-container {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: center;
+ 
+}
+
+.about-content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+
+
+
+.contact-us-button {
+  margin: 15px auto;
+  display: block;
+  padding: 10px 10px;
+  font-size: 18px;
+  border: 1px solid #12e655;
+  border-radius: 5px;
+  background-color: #1cb442;
+  color: #fff;
+  cursor: pointer;
+  text-align: center; /* Выравнивание текста по центру */
+  width: 200px; /* Ширина кнопки */
+}
+
+.contact-us-button:hover {
+  background-color: #12e655; /* Изменение цвета при наведении */
+}

@@ -1,0 +1,13 @@
+<div class="photo-gallery">
+    <p style="margin-top: 3%; margin-left: -3%;"><a [routerLink]="['/albums', photos[0].albumId]" class="back-button"><< Back</a></p>
+    <ul *ngIf="loaded; else loading" class="photo-item">
+        <li *ngFor="let photo of photos">
+            <p>{{photo.id}}. Title: {{photo.title}}<p>
+
+            <img src="{{photo.thumbnailUrl}}" alt="photo">
+        </li>
+    </ul>
+    <ng-template #loading>
+        <div class="loader"></div>
+    </ng-template>    
+</div>
