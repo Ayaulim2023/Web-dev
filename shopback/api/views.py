@@ -2,9 +2,13 @@ from .models import Product,Category
 from django.http import JsonResponse,Http404
 
 def list_products(request):
-    products = Product.objects.all()
-    products = [product.to_json() for product in products]
-    return JsonResponse({"products": products})
+    quertset = Product.objects.all()
+    products = []
+    for product in quertset:
+        products.append(product.to_json())
+
+    return JsonResponse(products, safe=False)
+
 
 
 def getProductDetail(request, product_id):
