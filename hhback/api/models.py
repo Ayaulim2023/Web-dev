@@ -30,5 +30,6 @@ class Vacancy(models.Model):
         return{
             "name": self.name,
             "description": self.description,
-            "salary": self.salary
+            "salary": self.salary,
+            # "company": self.company,
         }
