@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { Company } from '../models';
 import { CompanyService } from '../company.service';
 
+
 @Component({
   selector: 'app-companies',
   templateUrl: './companies.component.html',

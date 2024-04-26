@@ -10,7 +10,6 @@ def list_products(request):
     return JsonResponse(products, safe=False)
 
 
-
 def getProductDetail(request, product_id):
     try:
         product = Product.objects.get(pk=product_id)

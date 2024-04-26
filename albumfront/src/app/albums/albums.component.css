@@ -1,0 +1,131 @@
+body {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .back_arrow{
+    width: 50px;
+    height: 50px;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+
+}
+
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.album-list{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.album-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 150px;
+    margin-bottom: 15px;
+
+}
+
+.album-item a {
+    margin-right: 20px;
+} */
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Style for the li elements */
+  li {
+    margin-bottom: 10px;
+    margin-left: 15px;
+    display: inline-block; /* Add some spacing between list items */
+  }
+  
+  /* Style for the anchor tag within list items */
+  li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set text color */
+    font-weight: bold; /* Make text bold */
+    margin-right: 10px; /* Add spacing between link and button */
+  }
+  
+  /* Style for the button within list items */
+  li .button {
+    background-color: #ff6347; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Set button padding */
+    border-radius: 5px; /* Add button border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Hover effect for the button */
+  li .button:hover {
+    background-color: #ff4833; /* Change button background color on hover */
+  }
+
+  .category-form {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    size: 25px;
+  }
+  
+  .category-form h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .category-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-form label {
+    margin-bottom: 6px;
+  }
+  
+  .category-form input[type="text"] {
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .category-form button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .category-form button:hover {
+    background-color: #0056b3;
+  }
+  

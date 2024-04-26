@@ -1,0 +1,68 @@
+/* category-detail.component.css
+
+.category-container {
+    margin-bottom: 20px;
+  }
+  
+  .category-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .photo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .photo-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .photo-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .photo-item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+   */
+
+   .category-info {
+    background-color: #f5f5f5; /* Background color for the category info */
+    padding: 20px; /* Add padding to the category info */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    margin-bottom: 20px; /* Add margin below the category info */
+  }
+  
+  .category-info h2 {
+    color: #333; /* Text color for the category name */
+  }
+  
+  .category-info h3 {
+    color: #666; /* Text color for the category description */
+  }
+  
+  .see-photos {
+    background-color: #007bff; /* Background color for the "See photos" link */
+    color: #fff; /* Text color for the link */
+    padding: 10px 20px; /* Add padding to the link */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    display: inline-block; /* Make the link behave as an inline-block element */
+  }
+  
+  .see-photos:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  

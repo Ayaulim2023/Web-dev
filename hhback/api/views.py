@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Company,Vacancy
 from django.http import JsonResponse,Http404
 from rest_framework.views import APIView
@@ -9,6 +9,19 @@ from .serializers import CompanySerializers, VacancySerializer
 from rest_framework.decorators import api_view
 from rest_framework.generics import ListAPIView
 
+from .forms import PhotoForm
+
+def add_photo(request, category_id):
+    if request.method == 'POST':
+        form = PhotoForm(request.POST, request.FILES)
+        if form.is_valid():
+            photo = form.save(commit=False)
+            photo.category_id = category_id
+            photo.save()
+            return redirect('category_detail', category_id=category_id)
+    else:
+        form = PhotoForm()
+    return render(request, 'add_photo.html', {'form': form})
 
 class list_company(APIView):
     def get(self, request):

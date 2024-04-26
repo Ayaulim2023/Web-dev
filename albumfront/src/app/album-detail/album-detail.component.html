@@ -1,0 +1,88 @@
+<!-- <header>
+    <a routerLink="/albums"> Go back</a> -->
+
+    <!-- <h1> Album {{ album.id }} </h1> -->
+    <!-- <h2> Album info </h2>   
+</header>
+  
+<body>
+
+    <div *ngIf="loaded"> 
+
+        <div class="album-info">
+            <h1> Album {{ album.id }} </h1>
+            <div class="title">
+                <div class="edit-false" *ngIf="!onEdit">
+                    <h2 > {{ album.title }} </h2>
+                    <button (click)="startEditing()">Edit title</button>
+                </div>
+                <div class="edit-true" *ngIf="onEdit">
+                    <input [(ngModel)]="newTitle" type="text" placeholder="Set new album name"/>
+                    <button type="button" (click) = "setNewTitle()"> Save </button>
+                </div>
+                
+
+            </div>
+
+            <a routerLink="photos">see photos</a>
+        </div>
+
+
+
+    </div>
+
+    <p *ngIf="!loaded"> Album is loading</p>
+
+</body> -->
+<!-- <header>
+    <a routerLink="/albums"> Go back</a>
+    <h2> Album info </h2>  
+</header> -->
+<div *ngIf="category" class="category-info">
+  <h2>{{ category.name }}</h2>
+  <h3>{{ category.description }}</h3>
+  <!-- Add any other fields you want to display for the category -->
+</div>
+<a *ngIf="category" [routerLink]="['/albums', category?.id, 'photos']" class="see-photos">See photos</a>
+
+  <!-- <div *ngIf="photos">
+    <div *ngFor="let photo of photos"> -->
+      <!-- <img [src]="photo.image" alt="{{ photo.name }}">
+      <h4>{{ photo.name }}</h4>
+      <p>{{ photo.description }}</p> -->
+      <!-- <a [routerLink]="['/albums', category.id, 'photos']">See photos</a> -->
+      <!-- Add any other fields you want to display for each photo -->
+    <!-- </div>
+  </div> -->
+<!-- <div *ngIf="loaded">  -->
+<!-- <body> -->
+    <!-- <div *ngIf="category">
+        <h2>{{ category.name }}</h2>
+      </div> -->
+      
+    <!-- <div *ngIf="category">
+        <h1>Category {{ category.id }}</h1>
+        <div class="title">
+          <div *ngIf="!editingTitle">
+            <h2>{{ category.name }}</h2>
+            <button (click)="toggleEdit()">Edit title</button>
+          </div>
+          <div *ngIf="editingTitle">
+            <input type="text" [(ngModel)]="newTitle" placeholder="Enter new category name">
+            <button (click)="saveTitle()">Save</button>
+          </div>
+        </div>
+        <a routerLink="photos">See photos</a>
+      </div> -->
+
+    <!-- </body> -->
+
+
+<!--   
+  <div *ngIf="photos">
+    <div *ngFor="let photo of photos">
+      <img [src]="photo.image" alt="{{ photo.name }}">
+      <h3>{{ photo.name }}</h3>
+      <p>{{ photo.description }}</p>
+    </div>
+  </div> -->

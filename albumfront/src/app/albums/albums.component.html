@@ -1,0 +1,44 @@
+<!-- <body>
+    <div class="top-bar">
+        <a routerLink="/home" (click)="resetAlbumIndex()" class="home">
+            <img class="back_arrow" src="https://cdn.iconscout.com/icon/free/png-256/free-back-arrow-1780574-1514450.png">
+        </a>
+
+        <h2>Album list</h2>
+
+        <input type="text" placeholder="New Album" [(ngModel)]="newTitle"/>
+
+        <button type="button" (click)="addNewAlbum()">Create</button>
+
+    </div>
+
+    <div class="album-list">
+        <div class="album-item" *ngFor="let album of albums">
+            <a routerLink='/albums/{{album.id}}'> {{album.id}} {{album.title}}</a>
+            <button type="button" (click)="deleteAlbum(album)">Delete</button>
+        </div>
+    </div>
+    <button class="show-more-button" (click)="showMoreAlbums()">
+        Show more
+    </button>
+</body> -->
+<h2>Albums</h2>
+<ul>
+  <li *ngFor="let category of categories">
+    <a [routerLink]="['/albums', category.id]">{{ category.name }}</a>
+    <button class="button" (click)="deleteAlbum(category.id)">Delete</button>
+  </li>
+</ul>
+
+<div class="category-form">
+    <h2>Add New Category</h2>
+    <form (submit)="addCategory()">
+      <label for="categoryName">Name:</label>
+      <input type="text" id="categoryName" name="categoryName" [(ngModel)]="newCategoryName" required>
+      <button type="submit">Add Category</button>
+    </form>
+  </div>
+  
+
+<!-- <input type="text" #categoryName placeholder="Enter category name">
+<button (click)="addCategory(categoryName.value)">Add Category</button> -->

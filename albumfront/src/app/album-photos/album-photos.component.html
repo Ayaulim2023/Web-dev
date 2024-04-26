@@ -1,0 +1,28 @@
+<!-- <header>
+    <a routerLink="/albums" >
+        <img class="back_arrow" src="https://cdn.iconscout.com/icon/free/png-256/free-back-arrow-1780574-1514450.png">
+    </a>
+
+    <h2> {{album.title}} Photos </h2>   
+</header>
+
+
+<body>
+        <div *ngFor="let photo of photos" class="photos">
+            <img src="{{photo.url}}">    
+            <p> {{photo.id}} {{photo.title}} </p>
+            <p><a href="{{photo.url}}">  link to original </a></p>
+        </div>
+</body> -->
+
+
+<div *ngIf="photos" class="photo-container">
+    <div *ngFor="let photo of photos" class="photo-item">
+      <img [src]="photo.image" alt="Photo" class="photo">
+      <div class="photo-details">
+        <h3>{{ photo.name }}</h3>
+        <p>{{ photo.description }}</p>
+        <button type="button" (click)="deletePhoto(photo.id)">Delete</button>
+      </div>
+    </div>
+  </div>
